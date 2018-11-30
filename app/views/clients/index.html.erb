@@ -1,0 +1,73 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Clients</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Prenom</th>
+      <th>Nom</th>
+      <th>Civilité</th>
+      <th>Sap code</th>
+      <th>Raison sociale</th>
+      <th>Fonction</th>
+      <th>Participation</th>
+      <th>Email</th>
+      <th>Numero</th>
+      <th>Transport</th>
+      <th>Aller depart</th>
+      <th>Aller arrivee</th>
+      <th>Aller numero flight</th>
+      <th>Aller horaire arrivee</th>
+      <th>Retour depart</th>
+      <th>Retour arrivee</th>
+      <th>Retour numero flight</th>
+      <th>Retour horaire depart</th>
+      <th>Navette bus</th>
+      <th>Parking</th>
+      <th>Parking palce</th>
+      <th>Herbergement</th>
+      <th>Regime</th>
+      <th>Observations</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @clients.each do |client| %>
+      <tr>
+        <td><%= client.prenom %></td>
+        <td><%= client.nom %></td>
+        <td><%= client.civilité %></td>
+        <td><%= client.sap_code %></td>
+        <td><%= client.raison_sociale %></td>
+        <td><%= client.fonction %></td>
+        <td><%= client.participation %></td>
+        <td><%= client.email %></td>
+        <td><%= client.numero %></td>
+        <td><%= client.transport %></td>
+        <td><%= client.aller_depart %></td>
+        <td><%= client.aller_arrivee %></td>
+        <td><%= client.aller_numero_flight %></td>
+        <td><%= client.aller_horaire_arrivee %></td>
+        <td><%= client.retour_depart %></td>
+        <td><%= client.retour_arrivee %></td>
+        <td><%= client.retour_numero_flight %></td>
+        <td><%= client.retour_horaire_depart %></td>
+        <td><%= client.navette_bus %></td>
+        <td><%= client.parking %></td>
+        <td><%= client.parking_palce %></td>
+        <td><%= client.herbergement %></td>
+        <td><%= client.regime %></td>
+        <td><%= client.observations %></td>
+        <td><%= link_to 'Show', client %></td>
+        <td><%= link_to 'Edit', edit_client_path(client) %></td>
+        <td><%= link_to 'Destroy', client, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Client', new_client_path %>

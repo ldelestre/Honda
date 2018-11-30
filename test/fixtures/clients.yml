@@ -1,0 +1,53 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  prenom: MyString
+  nom: MyString
+  civilité: MyString
+  sap_code: MyString
+  raison_sociale: MyString
+  fonction: MyString
+  participation: false
+  email: MyString
+  numero: 1
+  transport: MyString
+  aller_depart: MyString
+  aller_arrivee: MyString
+  aller_numero_flight: MyString
+  aller_horaire_arrivee: MyString
+  retour_depart: MyString
+  retour_arrivee: MyString
+  retour_numero_flight: MyString
+  retour_horaire_depart: MyString
+  navette_bus: MyString
+  parking: false
+  parking_palce: MyString
+  herbergement: false
+  regime: MyText
+  observations: MyText
+
+two:
+  prenom: MyString
+  nom: MyString
+  civilité: MyString
+  sap_code: MyString
+  raison_sociale: MyString
+  fonction: MyString
+  participation: false
+  email: MyString
+  numero: 1
+  transport: MyString
+  aller_depart: MyString
+  aller_arrivee: MyString
+  aller_numero_flight: MyString
+  aller_horaire_arrivee: MyString
+  retour_depart: MyString
+  retour_arrivee: MyString
+  retour_numero_flight: MyString
+  retour_horaire_depart: MyString
+  navette_bus: MyString
+  parking: false
+  parking_palce: MyString
+  herbergement: false
+  regime: MyText
+  observations: MyText

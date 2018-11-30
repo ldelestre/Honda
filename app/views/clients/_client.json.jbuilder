@@ -1,0 +1,2 @@
+json.extract! client, :id, :prenom, :nom, :civilité, :sap_code, :raison_sociale, :fonction, :participation, :email, :numero, :transport, :aller_depart, :aller_arrivee, :aller_numero_flight, :aller_horaire_arrivee, :retour_depart, :retour_arrivee, :retour_numero_flight, :retour_horaire_depart, :navette_bus, :parking, :parking_palce, :herbergement, :regime, :observations, :created_at, :updated_at
+json.url client_url(client, format: :json)

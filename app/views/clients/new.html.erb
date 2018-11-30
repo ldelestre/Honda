@@ -1,0 +1,176 @@
+<img src="honda_header.jpg" class="header-banner">
+
+<div class="navbar">
+	<ul>
+		<li><%= link_to "Agenda", root_path %></li>
+		<li><%= link_to "Inscription", inscription_path %></li>
+		<li><%= link_to "Informations", informations_path %></li>
+		<li><%= link_to "Contact", contact_path %></li>
+	</ul>
+</div> 
+
+<div class="form">
+<%= form_with(model: @client, local: true) do |form| %>
+  <% if @client.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@client.errors.count, "error") %> prohibited this @client from being saved:</h2>
+
+      <ul>
+      <% @client.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="box-infos">
+  <div class="infos-gauche">
+    <h2>Informations Magasin</h2>
+    <div class="field">
+      <%= form.label :sap_code %>
+      <%= form.text_field :sap_code %>
+    </div>
+
+    <div class="field">
+      <%= form.label :raison_sociale %>
+      <%= form.text_field :raison_sociale %>
+    </div>
+  </div>
+
+  <div class="infos-droite">
+    <h2>Informations Personnelles</h2>
+    <div class="field">
+      <%= form.select(:civilité, ['Mr', 'Mme'], {include_blank: "Sélectionnez"}, { :class => 'my_style_class' }) %>
+    </div>
+
+    <div class="field">
+      <%= form.label :prenom %>
+      <%= form.text_field :prenom %>
+    </div>
+
+    <div class="field">
+      <%= form.label :nom %>
+      <%= form.text_field :nom %>
+    </div>
+
+    <div class="field">
+      <%= form.label :fonction %>
+      <%= form.text_field :fonction %>
+    </div>
+  </div>
+</div>
+
+  <div class="field">
+  	<p>Votre participation :</p>
+    <%= form.label :participation, 'Oui', :value => true %>
+    <%= form.radio_button :participation, 'true' %> 
+    <%= form.label :participation, 'Non', :value => false %>
+    <%= form.radio_button :participation, 'false' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :numero %>
+    <%= form.number_field :numero %>
+  </div>
+
+<h2>Transport</h2>
+  <div class="field">
+		<%= form.select(:transport, ['Train', 'Avion', 'Voiture', 'Moto'], {include_blank: "Sélectionnez"}, { :class => 'my_style_class' }) %>
+  </div>
+
+  <h4>Aller</h4>
+	  <div class="field">
+	    <%= form.label :aller_depart %>
+	    <%= form.text_field :aller_depart %>
+	  </div>
+
+	  <div class="field">
+	    <%= form.label :aller_arrivee %>
+	    <%= form.text_field :aller_arrivee %>
+	  </div>
+
+	  <div class="field">
+	    <%= form.label :aller_numero_flight %>
+	    <%= form.text_field :aller_numero_flight %>
+	  </div>
+
+	  <div class="field">
+	    <%= form.label :aller_horaire_arrivee %>
+	    <%= form.text_field :aller_horaire_arrivee %>
+	  </div>
+
+  <h4>Retour</h4>
+	  <div class="field">
+	    <%= form.label :retour_depart %>
+	    <%= form.text_field :retour_depart %>
+	  </div>
+
+	  <div class="field">
+	    <%= form.label :retour_arrivee %>
+	    <%= form.text_field :retour_arrivee %>
+	  </div>
+
+	  <div class="field">
+	    <%= form.label :retour_numero_flight %>
+	    <%= form.text_field :retour_numero_flight %>
+	  </div>
+
+	  <div class="field">
+	    <%= form.label :retour_horaire_depart %>
+	    <%= form.text_field :retour_horaire_depart %>
+	  </div>
+
+
+<h2>Navette</h2>
+  <div class="field">
+    <%= form.select(:navette_bus, ['Gare Paris Montparnasse', 'Paris Gare de Lyon', 'Paris Gare du Nord', 'Aéroport Paris Orly'], {include_blank: "Sélectionnez"}, { :class => 'my_style_class' }) %>
+  </div>
+
+
+<h2>Parking</h2>
+  <div class="field">
+    <%= form.label :parking, 'Oui', :value => true %>
+    <%= form.radio_button :parking, 'true' %> 
+    <%= form.label :parking, 'Non', :value => false %>
+    <%= form.radio_button :parking, 'false' %>
+  </div>
+
+  <div class="field">
+    <%= form.select(:parking_palce, ['Gare Paris Montparnasse', 'Paris Gare de Lyon', 'Paris Gare du Nord', 'Aéroport Paris Orly'], {include_blank: "Sélectionnez"}, { :class => 'my_style_class' }) %>
+  </div>
+
+
+<h2>Hébergement</h2>
+  <div class="field">
+    <%= form.label :herbergement, 'Oui', :value => true %>
+    <%= form.radio_button :herbergement, 'true' %> 
+    <%= form.label :herbergement, 'Non', :value => false %>
+    <%= form.radio_button :herbergement, 'false' %>
+  </div>
+
+<h2>Régime Alimentaire</h2>
+  <div class="field">
+    <%= form.label :regime %>
+    <%= form.text_area :regime %>
+  </div>
+
+<h2>Observations</h2>
+  <div class="field">
+    <%= form.label :observations %>
+    <%= form.text_area :observations %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "VALIDER", :class => "button" %>
+  </div>
+<% end %>
+
+</div>
+
+
+<img src="honda_footer.jpg" class="header-banner">
