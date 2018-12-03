@@ -8,7 +8,6 @@ class CreateClients < ActiveRecord::Migration[5.2]
       t.string :raison_sociale
       t.string :fonction
       t.boolean :participation
-      t.string :email
       t.integer :numero
       t.string :transport
       t.string :aller_depart
@@ -21,7 +20,7 @@ class CreateClients < ActiveRecord::Migration[5.2]
       t.string :retour_horaire_depart
       t.string :navette_bus
       t.boolean :parking
-      t.string :parking_palce
+      t.string :parking_place
       t.boolean :herbergement
       t.text :regime
       t.text :observations
