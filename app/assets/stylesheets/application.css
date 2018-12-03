@@ -53,12 +53,31 @@ body {
 }
 
 .form {
-    padding: 2%;
+    padding-top: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 .desc-agenda {
     font-weight: bold;
     font-size: 18px;
+}
+
+.contact-title {
+    padding-top: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.contact {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.infos-all {
+    padding-top: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 h2 {
@@ -74,12 +93,12 @@ table {
 td {
     width: 33%;
     height: 50px;
-    vertical-align: middle;
 }
 
 tr, td {
     padding: 20px;
     text-align: center;
+    vertical-align: middle;
     border-bottom: 1px solid #ddd;
 }
 
@@ -113,4 +132,3 @@ li a:visited {
 li a:hover {
     background-color: #A9272A;
 }
-
