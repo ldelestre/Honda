@@ -23,8 +23,6 @@
     </div>
   <% end %>
 
-<div class="box-infos">
-  <div class="infos-gauche">
     <h2>Informations Magasin</h2>
     <div class="field">
       <%= form.label :sap_code %>
@@ -35,9 +33,7 @@
       <%= form.label :raison_sociale %>
       <%= form.text_field :raison_sociale %>
     </div>
-  </div>
 
-  <div class="infos-droite">
     <h2>Informations Personnelles</h2>
     <div class="field">
       <%= form.select(:civilité, ['Mr', 'Mme'], {include_blank: "Sélectionnez"}, { :class => 'my_style_class' }) %>
@@ -57,8 +53,6 @@
       <%= form.label :fonction %>
       <%= form.text_field :fonction %>
     </div>
-  </div>
-</div>
 
   <div class="field">
   	<p>Votre participation :</p>
