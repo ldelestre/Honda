@@ -67,6 +67,6 @@ class ClientsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def client_params
-      params.require(:client).permit(:prenom, :nom, :civilité, :sap_code, :raison_sociale, :fonction, :participation, :email, :numero, :transport, :aller_depart, :aller_arrivee, :aller_numero_flight, :aller_horaire_arrivee, :retour_depart, :retour_arrivee, :retour_numero_flight, :retour_horaire_depart, :navette_bus, :parking, :parking_palce, :herbergement, :regime, :observations)
+      params.require(:client).permit(:prenom, :nom, :civilité, :sap_code, :raison_sociale, :fonction, :participation, :email, :numero, :transport, :aller_depart, :aller_arrivee, :aller_numero_flight, :aller_horaire_arrivee, :retour_depart, :retour_arrivee, :retour_numero_flight, :retour_horaire_depart, :navette_bus, :parking, :parking_place, :herbergement, :regime, :observations)
     end
 end
