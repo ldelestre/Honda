@@ -21,6 +21,13 @@ body {
 	height: 100%;
 }
 
+.done-message {
+  height: 200px;
+  width: 100%;
+  text-align: center;
+  padding-top: 5%;
+}
+
 .agenda-section {
   padding: 20px 100px 20px;
 }
