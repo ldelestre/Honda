@@ -21,6 +21,10 @@ body {
 	height: 100%;
 }
 
+.agenda-section {
+  padding: 40px 100px 40px;
+}
+
 .header-banner {
 	width: 100%;
 	height: 100%;
