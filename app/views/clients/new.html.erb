@@ -13,7 +13,7 @@
 <%= form_with(model: @client, local: true) do |form| %>
   <% if @client.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@client.errors.count, "error") %> prohibited this @client from being saved:</h2>
+      <h5><%= pluralize(@client.errors.count, "error") %> prohibited this @client from being saved:</h5>
 
       <ul>
       <% @client.errors.full_messages.each do |message| %>
@@ -23,148 +23,193 @@
     </div>
   <% end %>
 
-    <h2>Informations Magasin</h2>
-    <div class="field">
-      <%= form.label :sap_code %>
-      <%= form.text_field :sap_code %>
-    </div>
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <h5>Informations Magasins</h5>
+        <div class="input-field col s6">
+          <%= form.label :sap_code %>
+          <%= form.text_field :sap_code %>
+        </div>
+        <div class="input-field col s6">
+          <%= form.label :raison_sociale %>
+          <%= form.text_field :raison_sociale %>
+        </div>
+      </div>
+      <div class="row">
+        <h5>Informations Personnelles</h5>
+        <div class="input-field col s12">
+          <select class="browser-default">
+            <option value="" disabled selected>Sélectionnez</option>
+            <option value="Mr">Madame</option>
+            <option value="Mme">Monsieur</option>
+          </select>
+        </div>
+        <div class="input-field col s4">
+          <%= form.label :prenom %>
+          <%= form.text_field :prenom %>
+        </div>
+        <div class="input-field col s4">
+          <%= form.label :nom %>
+          <%= form.text_field :nom %>
+        </div>
+        <div class="input-field col s4">
+          <%= form.label :fonction %>
+          <%= form.text_field :fonction %>
+        </div>
+        <div class="input-field col s6">
+          <%= form.label :email %>
+          <%= form.text_field :email %>
+        </div>
+        <div class="input-field col s6">
+          <%= form.label :numero %>
+          <%= form.number_field :numero %>
+        </div>
+      </div>
+      <div class="row">
+        <h5>Votre participation :</h5>
+        <div class="input-field col s12">
+          <p>
+            <label>
+              <input name="group1" type="radio" />
+              <span>Oui</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input name="group1" type="radio" />
+              <span>Non</span>
+            </label>
+          </p>
+        </div>
+        <div class="row">
+          <h5>Transport</h5>
+          <div class="input-field col s12">
+            <select class="browser-default">
+              <option value="" disabled selected>Sélectionnez</option>
+              <option value="Train">Train</option>
+              <option value="Avion">Avion</option>
+              <option value="Voiture">Voiture</option>
+              <option value="Moto">Moto</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <h6>Aller</h6>
+            <div class="input-field col s3">
+              <%= form.label :aller_depart %>
+              <%= form.text_field :aller_depart %>
+            </div>
 
-    <div class="field">
-      <%= form.label :raison_sociale %>
-      <%= form.text_field :raison_sociale %>
-    </div>
+            <div class="input-field col s3">
+              <%= form.label :aller_arrivee %>
+              <%= form.text_field :aller_arrivee %>
+            </div>
 
-    <h2>Informations Personnelles</h2>
-    <div class="field">
-      <%= form.select(:civilité, ['Mr', 'Mme'], {include_blank: "Sélectionnez"}, { :class => 'my_style_class' }) %>
-    </div>
+            <div class="input-field col s3">
+              <%= form.label :aller_numero_flight %>
+              <%= form.text_field :aller_numero_flight %>
+            </div>
 
-    <div class="field">
-      <%= form.label :prenom %>
-      <%= form.text_field :prenom %>
-    </div>
+            <div class="input-field col s3">
+              <%= form.label :aller_horaire_arrivee %>
+              <%= form.text_field :aller_horaire_arrivee %>
+            </div>
+        </div>
+        <div class="row">
+          <h6>Retour</h6>
+            <div class="input-field col s3">
+              <%= form.label :retour_depart %>
+              <%= form.text_field :retour_depart %>
+            </div>
 
-    <div class="field">
-      <%= form.label :nom %>
-      <%= form.text_field :nom %>
-    </div>
+            <div class="input-field col s3">
+              <%= form.label :retour_arrivee %>
+              <%= form.text_field :retour_arrivee %>
+            </div>
 
-    <div class="field">
-      <%= form.label :fonction %>
-      <%= form.text_field :fonction %>
-    </div>
+            <div class="input-field col s3">
+              <%= form.label :retour_numero_flight %>
+              <%= form.text_field :retour_numero_flight %>
+            </div>
 
-  <div class="field">
-  	<p>Votre participation :</p>
-    <%= form.label :participation, 'Oui', :value => true %>
-    <%= form.radio_button :participation, 'true' %> 
-    <%= form.label :participation, 'Non', :value => false %>
-    <%= form.radio_button :participation, 'false' %>
+            <div class="input-field col s3">
+              <%= form.label :retour_horaire_arrivee %>
+              <%= form.text_field :retour_horaire_arrivee %>
+            </div>
+        </div>
+        <div class="row">
+          <h5>Navette</h5>
+          <div class="input-field col s12">
+            <select class="browser-default">
+              <option value="" disabled selected>Sélectionnez</option>
+              <option value="Gare Paris Montparnasse">Gare Paris Montparnasse</option>
+              <option value="Paris Gare de Lyon">Paris Gare de Lyon</option>
+              <option value="Paris Gare du Nord">Paris Gare du Nord</option>
+              <option value="Aéroport Paris Orly">Aéroport Paris Orly</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+         <h5>Parking</h5>
+          <div class="input-field col s6">
+            <p>
+              <label>
+                <input name="group1" type="radio" />
+                <span>Oui</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input name="group1" type="radio" />
+                <span>Non</span>
+              </label>
+            </p>
+          </div>
+            <select class="browser-default">
+              <option value="" disabled selected>Sélectionnez</option>
+              <option value="Gare Paris Montparnasse">Gare Paris Montparnasse</option>
+              <option value="Paris Gare de Lyon">Paris Gare de Lyon</option>
+              <option value="Paris Gare du Nord">Paris Gare du Nord</option>
+              <option value="Aéroport Paris Orly">Aéroport Paris Orly</option>
+            </select>
+        </div>
+        <div class="row">
+          <h5>Hébergement</h5>
+          <div class="input-field col s12">
+            <p>
+              <label>
+                <input name="group1" type="radio" />
+                <span>Oui</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input name="group1" type="radio" />
+                <span>Non</span>
+              </label>
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <h6>Régime Alimentaire</h6>
+          <div class="input-field col s12">
+            <%= form.label :regime %>
+            <%= form.text_field :regime %>
+          </div>
+          <h6>Observations</h6>
+          <div class="input-field col s12">
+            <%= form.label :observations %>
+            <%= form.text_field :observations %>
+          </div>
+        </div>
+        <div class="row">
+          <%= form.submit "ENVOYER", :class => "button" %>
+        </div>
+      <% end %>
+    </form>
   </div>
 
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
-  </div>
-
-  <div class="field">
-    <%= form.label :numero %>
-    <%= form.number_field :numero %>
-  </div>
-
-<h2>Transport</h2>
-  <div class="field">
-		<%= form.select(:transport, ['Train', 'Avion', 'Voiture', 'Moto'], {include_blank: "Sélectionnez"}, { :class => 'my_style_class' }) %>
-  </div>
-
-  <h4>Aller</h4>
-	  <div class="field">
-	    <%= form.label :aller_depart %>
-	    <%= form.text_field :aller_depart %>
-	  </div>
-
-	  <div class="field">
-	    <%= form.label :aller_arrivee %>
-	    <%= form.text_field :aller_arrivee %>
-	  </div>
-
-	  <div class="field">
-	    <%= form.label :aller_numero_flight %>
-	    <%= form.text_field :aller_numero_flight %>
-	  </div>
-
-	  <div class="field">
-	    <%= form.label :aller_horaire_arrivee %>
-	    <%= form.text_field :aller_horaire_arrivee %>
-	  </div>
-
-  <h4>Retour</h4>
-	  <div class="field">
-	    <%= form.label :retour_depart %>
-	    <%= form.text_field :retour_depart %>
-	  </div>
-
-	  <div class="field">
-	    <%= form.label :retour_arrivee %>
-	    <%= form.text_field :retour_arrivee %>
-	  </div>
-
-	  <div class="field">
-	    <%= form.label :retour_numero_flight %>
-	    <%= form.text_field :retour_numero_flight %>
-	  </div>
-
-	  <div class="field">
-	    <%= form.label :retour_horaire_depart %>
-	    <%= form.text_field :retour_horaire_depart %>
-	  </div>
-
-
-<h2>Navette</h2>
-  <div class="field">
-    <%= form.select(:navette_bus, ['Gare Paris Montparnasse', 'Paris Gare de Lyon', 'Paris Gare du Nord', 'Aéroport Paris Orly'], {include_blank: "Sélectionnez"}, { :class => 'my_style_class' }) %>
-  </div>
-
-
-<h2>Parking</h2>
-  <div class="field">
-    <%= form.label :parking, 'Oui', :value => true %>
-    <%= form.radio_button :parking, 'true' %> 
-    <%= form.label :parking, 'Non', :value => false %>
-    <%= form.radio_button :parking, 'false' %>
-  </div>
-
-  <div class="field">
-    <%= form.select(:parking_place, ['Gare Paris Montparnasse', 'Paris Gare de Lyon', 'Paris Gare du Nord', 'Aéroport Paris Orly'], {include_blank: "Sélectionnez"}, { :class => 'my_style_class' }) %>
-  </div>
-
-
-<h2>Hébergement</h2>
-  <div class="field">
-    <%= form.label :herbergement, 'Oui', :value => true %>
-    <%= form.radio_button :herbergement, 'true' %> 
-    <%= form.label :herbergement, 'Non', :value => false %>
-    <%= form.radio_button :herbergement, 'false' %>
-  </div>
-
-<h2>Régime Alimentaire</h2>
-  <div class="field">
-    <%= form.label :regime %>
-    <%= form.text_area :regime %>
-  </div>
-
-<h2>Observations</h2>
-  <div class="field">
-    <%= form.label :observations %>
-    <%= form.text_area :observations %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit "VALIDER", :class => "button" %>
-  </div>
-<% end %>
-
+<div class="footer">
+  <img src="honda_footer.jpg" class="header-banner">
 </div>
-
-
-<img src="honda_footer.jpg" class="header-banner">

@@ -25,7 +25,9 @@ class ClientsController < ApplicationController
   # POST /clients.json
   def create
     @client = Client.new(client_params)
-
+    @client.skip_password_validation = true
+    @client.save
+    
     respond_to do |format|
       if @client.save
         format.html { redirect_to done_path }
