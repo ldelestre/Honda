@@ -72,74 +72,73 @@
       <h5>Votre participation :</h5>
       <div id="choixParticipation">
         <label for="participationOui" class="radio-inline">
-          <input name="group1" type="radio" onclick="blocParticipationExpend()"; name="participation" id="participationOui" value="oui" checked="checked"/>
+          <input type="radio" onclick="blocParticipationExpend()"; name="participation" id="participationOui" value="oui" checked="checked"/>
           <span>Oui</span>
         </label>
         <label for="participationNon" class="radio-inline">
-          <input name="group1" type="radio" onclick="blocParticipationExpend()"; name="participation" id="participationNon" value="non"/>
+          <input type="radio" onclick="blocParticipationExpend()"; name="participation" id="participationNon" value="non"/>
           <span>Non</span>
         </label>
       </div>
     </div>
 
     <div id="blocParticipation" style="display:block;">
-
-    <div class="row" id="champTransport">
-      <h5>Transport</h5>
-      <div class="input-field col s12">
-        <select class="browser-default">
-          <option value="" disabled selected>Sélectionnez</option>
-          <option value="Train">Train</option>
-          <option value="Avion">Avion</option>
-          <option value="Voiture">Voiture</option>
-          <option value="Moto">Moto</option>
-        </select>
+      <div class="row" id="champTransport">
+        <h5>Transport</h5>
+        <div class="input-field col s12">
+          <select class="browser-default">
+            <option value="" disabled selected>Sélectionnez</option>
+            <option value="Train">Train</option>
+            <option value="Avion">Avion</option>
+            <option value="Voiture">Voiture</option>
+            <option value="Moto">Moto</option>
+          </select>
+        </div>
       </div>
-    </div>
 
       <div class="row">
         <h6>Aller</h6>
-          <div class="input-field col s3" id="champGareAeroportDepartAller">
-            <%= form.label :aller_depart %>
-            <%= form.text_field :aller_depart %>
-          </div>
+        <div class="input-field col s3" id="champGareAeroportDepartAller">
+          <%= form.label :aller_depart %>
+          <%= form.text_field :aller_depart %>
+        </div>
 
-          <div class="input-field col s3" id="champGareAeroportArriveeAller">
-            <%= form.label :aller_arrivee %>
-            <%= form.text_field :aller_arrivee %>
-          </div>
+        <div class="input-field col s3" id="champGareAeroportArriveeAller">
+          <%= form.label :aller_arrivee %>
+          <%= form.text_field :aller_arrivee %>
+        </div>
 
-          <div class="input-field col s3" id="champNumTrainAvionAller">
-            <%= form.label :aller_numero_flight %>
-            <%= form.text_field :aller_numero_flight %>
-          </div>
+        <div class="input-field col s3" id="champNumTrainAvionAller">
+          <%= form.label :aller_numero_flight %>
+          <%= form.text_field :aller_numero_flight %>
+        </div>
 
-          <div class="input-field col s3" id="champHeureArriveeAller">
-            <%= form.label :aller_horaire_arrivee %>
-            <%= form.text_field :aller_horaire_arrivee %>
-          </div>
+        <div class="input-field col s3" id="champHeureArriveeAller">
+          <%= form.label :aller_horaire_arrivee %>
+          <%= form.text_field :aller_horaire_arrivee %>
+        </div>
       </div>
 
       <div class="row">
         <h6>Retour</h6>
-          <div class="input-field col s3" id="champGareAeroportDepartRetour">
-            <%= form.label :retour_depart %>
-            <%= form.text_field :retour_depart %>
-          </div>
+        <div class="input-field col s3" id="champGareAeroportDepartRetour">
+          <%= form.label :retour_depart %>
+          <%= form.text_field :retour_depart %>
+        </div>
 
-          <div class="input-field col s3" id="champGareAeroportArriveeRetour">
-            <%= form.label :retour_arrivee %>
-            <%= form.text_field :retour_arrivee %>
-          </div>
+        <div class="input-field col s3" id="champGareAeroportArriveeRetour">
+          <%= form.label :retour_arrivee %>
+          <%= form.text_field :retour_arrivee %>
+        </div>
 
-          <div class="input-field col s3" id="champNumTrainAvionRetour">
-            <%= form.label :retour_numero_flight %>
-            <%= form.text_field :retour_numero_flight %>
-          </div>
+        <div class="input-field col s3" id="champNumTrainAvionRetour">
+          <%= form.label :retour_numero_flight %>
+          <%= form.text_field :retour_numero_flight %>
+        </div>
 
-          <div class="input-field col s3" id="champHeureDepartRetour">
-            <%= form.label :retour_horaire_arrivee %>
-            <%= form.text_field :retour_horaire_arrivee %>
+        <div class="input-field col s3" id="champHeureDepartRetour">
+          <%= form.label :retour_horaire_arrivee %>
+          <%= form.text_field :retour_horaire_arrivee %>
           </div>
       </div>
 
@@ -161,32 +160,30 @@
         <div class="input-field col s6" id="champParking">
           <div id="champParking">
             <div id="choixParking">
-            
-            <label for="parkingOui" class="radio-inline">
-              <input name="group1" type="radio" onclick="blocParkingExpend()"; name="parking" id="parkingOui" value="oui"/>
-              <span>Oui</span>
-            </label>
-            
-            <label for="parkingNon" class="radio-inline">
-              <input name="group1" type="radio" onclick="blocParkingExpend()"; name="parking" id="parkingNon" value="non"/>
-              <span>Non</span>
-            </label>
+              <label for="parkingOui" class="radio-inline">
+                <input type="radio" onclick="blocParkingExpend()"; name="parking" id="parkingOui" value="oui"/>
+                <span>Oui</span>
+              </label>
+              <label for="parkingNon" class="radio-inline">
+                <input type="radio" onclick="blocParkingExpend()"; name="parking" id="parkingNon" value="non"/>
+                <span>Non</span>
+              </label>
+            </div>
           </div>
         </div>
+        
+        <div id="blocParking" style="display:block;">
+          <div id="champLieuParking">
+            <select class="browser-default">
+              <option value="" disabled selected>Sélectionnez</option>
+              <option value="Gare Paris Montparnasse">Gare Paris Montparnasse</option>
+              <option value="Paris Gare de Lyon">Paris Gare de Lyon</option>
+              <option value="Paris Gare du Nord">Paris Gare du Nord</option>
+              <option value="Aéroport Paris Orly">Aéroport Paris Orly</option>
+            </select>
+          </div>
+        </div>  
       </div>
-      
-      <div id="blocParking" style="display:block;">
-        <div id="champLieuParking">
-          <select class="browser-default">
-            <option value="" disabled selected>Sélectionnez</option>
-            <option value="Gare Paris Montparnasse">Gare Paris Montparnasse</option>
-            <option value="Paris Gare de Lyon">Paris Gare de Lyon</option>
-            <option value="Paris Gare du Nord">Paris Gare du Nord</option>
-            <option value="Aéroport Paris Orly">Aéroport Paris Orly</option>
-          </select>
-        </div>
-      </div>  
-    </div>
 
       <div class="row" id="champHebergement">
         <h5>Hébergement</h5>
@@ -210,7 +207,6 @@
           <%= form.label :regime %>
           <%= form.text_field :regime %>
         </div>
-
         <h6>Observations</h6>
         <div class="input-field col s12" id="champObservations">
           <%= form.label :observations %>
@@ -218,61 +214,59 @@
         </div>
       </div>
 
-    </div>
-
       <div class="row">
         <%= form.submit "ENVOYER", :class => "button" %>
       </div>
-    </div>
-    <% end %>
+    </div> <!-- Fin particpation block -->
   </form>
-  </div>
+<% end %>
+</div>
 
 <div class="footer">
   <img src="honda_footer.jpg" class="header-banner">
 </div>
 
 <script type="text/javascript">
-      function blocParticipationExpend(){
-      
-      if(document.getElementById("participationOui").checked){
-        document.getElementById("blocParticipation").style.display="block";
-        }
+  function blocParticipationExpend(){
+  
+  if(document.getElementById("participationOui").checked){
+    document.getElementById("blocParticipation").style.display="block";
+    }
 
-      else {
-        document.getElementById("blocParticipation").style.display="none";
-        document.getElementById("portable").value='';
-        document.getElementById("choixTransport").selectedIndex = 0;
-        document.getElementById("gareAeroportDepartAller").value='';
-        document.getElementById("gareAeroportArriveeAller").value='';
-        document.getElementById("numTrainAvionAller").value='';
-        document.getElementById("heureArriveeAller").value='';
-        document.getElementById("gareAeroportDepartRetour").value='';
-        document.getElementById("gareAeroportArriveeRetour").value='';
-        document.getElementById("numTrainAvionRetour").value='';
-        document.getElementById("heureDepartRetour").value='';
-        document.getElementById("choixNavette").selectedIndex = 0;
-        document.getElementById("parkingOui").checked=false;
-        document.getElementById("parkingNon").checked=false;
-        document.getElementById("choixLieuParking").selectedIndex = 0;
-        document.getElementById("hebergementOui").checked=false;
-        document.getElementById("hebergementNon").checked=false;
-        document.getElementById("regimeAlim").value='';
-        document.getElementById("observations").value='';
-        }   
-    
-      }
+  else {
+    document.getElementById("blocParticipation").style.display="none";
+    document.getElementById("portable").value='';
+    document.getElementById("choixTransport").selectedIndex = 0;
+    document.getElementById("gareAeroportDepartAller").value='';
+    document.getElementById("gareAeroportArriveeAller").value='';
+    document.getElementById("numTrainAvionAller").value='';
+    document.getElementById("heureArriveeAller").value='';
+    document.getElementById("gareAeroportDepartRetour").value='';
+    document.getElementById("gareAeroportArriveeRetour").value='';
+    document.getElementById("numTrainAvionRetour").value='';
+    document.getElementById("heureDepartRetour").value='';
+    document.getElementById("choixNavette").selectedIndex = 0;
+    document.getElementById("parkingOui").checked=false;
+    document.getElementById("parkingNon").checked=false;
+    document.getElementById("choixLieuParking").selectedIndex = 0;
+    document.getElementById("hebergementOui").checked=false;
+    document.getElementById("hebergementNon").checked=false;
+    document.getElementById("regimeAlim").value='';
+    document.getElementById("observations").value='';
+    }   
 
-      function blocParkingExpend(){
-      
-      if(document.getElementById("parkingOui").checked){
-        document.getElementById("blocParking").style.display="block";
-        }
+  }
 
-      else {
-        document.getElementById("blocParking").style.display="none";
-        document.getElementById("choixLieuParking").selectedIndex = 0;
-        }   
-    
-      }
+  function blocParkingExpend(){
+  
+  if(document.getElementById("parkingOui").checked){
+    document.getElementById("blocParking").style.display="block";
+    }
+
+  else {
+    document.getElementById("blocParking").style.display="none";
+    document.getElementById("choixLieuParking").selectedIndex = 0;
+    }   
+
+  }
 </script>
