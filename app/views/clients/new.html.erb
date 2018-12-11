@@ -64,18 +64,18 @@
       </div>
       <div class="input-field col s6">
         <%= form.label :numero %>
-        <%= form.number_field :numero %>
+        <%= form.text_field :numero %>
       </div>
     </div>
 
     <div class="row" id="champParticipation">
       <h5>Votre participation :</h5>
       <div id="choixParticipation">
-        <label for="participationOui">
+        <label for="participationOui" class="radio-inline">
           <input name="group1" type="radio" onclick="blocParticipationExpend()"; name="participation" id="participationOui" value="oui" checked="checked"/>
           <span>Oui</span>
         </label>
-        <label for="participationNon">
+        <label for="participationNon" class="radio-inline">
           <input name="group1" type="radio" onclick="blocParticipationExpend()"; name="participation" id="participationNon" value="non"/>
           <span>Non</span>
         </label>
@@ -162,12 +162,12 @@
           <div id="champParking">
             <div id="choixParking">
             
-            <label for="parkingOui">
-              <input name="group1" type="radio" onclick="blocParkingExpend()"; name="parking" id="parkingOui" value="oui" checked="checked"/>
+            <label for="parkingOui" class="radio-inline">
+              <input name="group1" type="radio" onclick="blocParkingExpend()"; name="parking" id="parkingOui" value="oui"/>
               <span>Oui</span>
             </label>
             
-            <label for="parkingNon">
+            <label for="parkingNon" class="radio-inline">
               <input name="group1" type="radio" onclick="blocParkingExpend()"; name="parking" id="parkingNon" value="non"/>
               <span>Non</span>
             </label>
@@ -191,18 +191,16 @@
       <div class="row" id="champHebergement">
         <h5>Hébergement</h5>
         <div class="input-field col s12">
-          <p>
-            <label>
+          <div>
+            <label class="radio-inline">
               <input name="group1" type="radio" />
               <span>Oui</span>
             </label>
-          </p>
-          <p>
-            <label>
+            <label class="radio-inline">
               <input name="group1" type="radio" />
               <span>Non</span>
             </label>
-          </p>
+          </div>
         </div>
       </div>
 
