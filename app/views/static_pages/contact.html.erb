@@ -7,11 +7,22 @@
 	<li><%= link_to "Contact", contact_path %></li>
 </ul>
 
+<% if client_signed_in? %>
+
 <h6 class="contact-title">Pour toute requête concernant votre participation à cet évènement</h6></br>
 
 <p class="contact">● Agence logistique</br> Envoyer un mail à <b><%= mail_to "contact@trajectoire2019honda.fr"%></b></p>
 
 <p class="contact">● Honda Moto</br> Contactez votre chef de région Honda France ou Ludovic Devos au 01 60 37 33 15.</p>
+
+<% else %>
+
+<div class="not-logged-in-message">
+	<h6>Pour accéder à ce site, vous avez besoin de vous identifier via le lien d'auto-connexion qui vous a été envoyé par email.</h6>
+	<h6>Pour toute information, merci de nous adresser vos questions à l’adresse e-mail suivante : <b><%= mail_to "contact@trajectoire2019honda.fr"%></b></h6>
+</div>
+
+<% end %>
 
 <div class="footer">
   <img src="honda_footer.jpg" class="header-banner">

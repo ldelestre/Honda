@@ -7,6 +7,8 @@
 	<li><%= link_to "Contact", contact_path %></li>
 </ul>
 
+<% if client_signed_in? %>
+
 <div class="infos-all">
 	<p>Des transferts en bus vers le lieu de la convention seront mis en place au départ des points de rencontre suivants :</p></br>
 
@@ -45,6 +47,15 @@
 
 	<p>Nous vous demandons donc de réserver votre plan d'acheminement selon les modalités indiquées ci-dessus.</p>
 </div>
+
+<% else %>
+
+<div class="not-logged-in-message">
+	<h6>Pour accéder à ce site, vous avez besoin de vous identifier via le lien d'auto-connexion qui vous a été envoyé par email.</h6>
+	<h6>Pour toute information, merci de nous adresser vos questions à l’adresse e-mail suivante : <b><%= mail_to "contact@trajectoire2019honda.fr"%></b></h6>
+</div>
+
+<% end %>
 
 <div class="footer">
 	<img src="honda_footer.jpg" class="header-banner">

@@ -7,6 +7,8 @@
 	<li><%= link_to "Contact", contact_path %></li>
 </ul>
 
+<% if client_signed_in? %>
+
 <div class="agenda-section">
 	<h5 class="date-agenda">Lundi 17 Décembre</h5>
 
@@ -75,5 +77,14 @@
 		</tbody>
 	</table>
 </div>
+
+<% else %>
+
+<div class="not-logged-in-message">
+	<h6>Pour accéder à ce site, vous avez besoin de vous identifier via le lien d'auto-connexion qui vous a été envoyé par email.</h6>
+	<h6>Pour toute information, merci de nous adresser vos questions à l’adresse e-mail suivante : <b><%= mail_to "contact@trajectoire2019honda.fr"%></b></h6>
+</div>
+
+<% end %>
 
 <img src="honda_footer.jpg" class="header-banner">
